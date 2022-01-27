@@ -12,6 +12,7 @@ import { DownloadedImage } from './downloaded_image'
 import { FileDoesNotExistError, RequestCancelledError } from './errors'
 import { UpdateLock } from './update_lock'
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const log = electronLog.scope('image-downloader')
 
 const existsAsync = promisify(Fs.exists)
